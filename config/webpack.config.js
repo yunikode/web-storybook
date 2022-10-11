@@ -246,6 +246,9 @@ module.exports = function (webpackEnv) {
       level: 'none',
     },
     optimization: {
+      usedExports: true,
+    sideEffects: true,
+    innerGraph: true,
       minimize: isEnvProduction,
       minimizer: [
         // This is only used in production mode
